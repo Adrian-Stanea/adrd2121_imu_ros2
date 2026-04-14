@@ -47,7 +47,7 @@ ExternalProject_Add(adi_imu_driver
    GIT_REMOTE_UPDATE_STRATEGY CHECKOUT
    BINARY_DIR          ${CMAKE_BINARY_DIR}/dependencies/adi_imu_driver
    INSTALL_DIR         ${CURRENT_CMAKE_INSTALL_PREFIX}
-   CONFIGURE_COMMAND   mkdir -p <BINARY_DIR> && cd <BINARY_DIR> && cmake -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR> <SOURCE_DIR>
+   CONFIGURE_COMMAND   mkdir -p <BINARY_DIR> && cd <BINARY_DIR> && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR> <SOURCE_DIR>
    BUILD_COMMAND       make -C <BINARY_DIR> -j 1
    INSTALL_COMMAND     make -C <BINARY_DIR> install
    TEST_COMMAND        echo ">>> adi_imu_driver_dirs: " COMMAND echo <SOURCE_DIR> COMMAND echo <BINARY_DIR>
