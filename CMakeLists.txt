@@ -163,9 +163,10 @@ target_include_directories(imu_buf_ros2_library
 )
 
 target_link_libraries(imu_buf_ros2_library
-  ${cpp_typesupport_target}  
+  ${cpp_typesupport_target}
   adi_imu_driver_imu_target
   adi_imu_driver_imubuf_target
+  adi_imu_driver_hwcomm_target
   adrd2121_imu_ros2_common_lib
 )
 
