@@ -48,8 +48,8 @@ ExternalProject_Add(adi_imu_driver
    BINARY_DIR          ${CMAKE_BINARY_DIR}/dependencies/adi_imu_driver
    INSTALL_DIR         ${CURRENT_CMAKE_INSTALL_PREFIX}
    CMAKE_ARGS          -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR>
-   BUILD_COMMAND       cmake --build <BINARY_DIR> -- -j 1
-   INSTALL_COMMAND     cmake --install <BINARY_DIR>
+   BUILD_COMMAND       make -C <BINARY_DIR> -j 1
+   INSTALL_COMMAND     make -C <BINARY_DIR> install
    TEST_COMMAND        echo ">>> adi_imu_driver_dirs: " COMMAND echo <SOURCE_DIR> COMMAND echo <BINARY_DIR>
    LOG_DOWNLOAD        1
    LOG_BUILD           1
